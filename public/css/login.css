@@ -4,11 +4,6 @@
     box-sizing: border-box;
 }
 
-body {
-    background-color: #FBC204;
-    height: 100vh;
-}
-
 .login-card {
     height: 50%;
     width: 30%;
@@ -78,23 +73,6 @@ body {
 .esqueceu_senha {
     text-decoration: none;
     color: #d4a407;
-}
-
-/* FOOTER */
-
-.footer {
-    border-top: 5px solid #F9575C;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #333;
-    color: #FCC302;
-    font-weight: bold;
-}
-
-main {
-    height: 70vh;
 }
 
 @media only screen and (max-width: 375px) {

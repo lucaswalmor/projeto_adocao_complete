@@ -16,20 +16,34 @@ class QueroDoarController extends Controller
 
     public function cadastroDoacao(Request $request) {     
 
-        // $request->validate([
-        //     'nome' => ['required', 'string', 'max:255'],
-        //     'especie' => ['required', 'string', 'max:11'],
-        //     'raca' => ['required', 'string', 'max:255'],
-        //     'porte' => ['required', 'string', 'max:255'],
-        //     'pelagem' => ['required', 'string', 'max:255'],
-        //     'cor_pelo' => ['required', 'string', 'max:255'],
-        //     'sexo' => ['required', 'string', 'max:255'],
-        //     'temperamento' => ['required', 'string', 'max:255'],
-        //     'situacao' => ['required', 'string', 'max:255'],
-        //     'historia' => ['required', 'string', 'max:255'],
-        //     'idade' => ['required', 'string', 'max:255'],
-        //     'fotos' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
-        // ]);
+        $request->validate([
+            'nome' => ['required', 'string', 'max:255'],
+            'especie' => ['required', 'string', 'max:11'],
+            'raca' => ['required', 'string', 'max:255'],
+            'porte' => ['required', 'string', 'max:255'],
+            'pelagem' => ['required', 'string', 'max:255'],
+            'cor_pelo' => ['required', 'string', 'max:255'],
+            'sexo' => ['required', 'string', 'max:255'],
+            'temperamento' => ['required', 'string', 'max:255'],
+            'situacao' => ['required', 'string', 'max:255'],
+            'historia' => ['required', 'string', 'max:255'],
+            'idade' => ['required', 'string', 'max:255'],
+            'fotos' => ['required']
+        ],
+        [
+            'nome.required' => 'O campo :attribute deve ser preenchido',
+            'especie.required' => 'O campo :attribute deve ser preenchido',
+            'raca.required' => 'O campo :attribute deve ser preenchido',
+            'porte.required' => 'O campo :attribute deve ser preenchido',
+            'pelagem.required' => 'O campo :attribute deve ser preenchido',
+            'cor_pelo.required' => 'O campo :attribute deve ser preenchido',
+            'sexo.required' => 'O campo :attribute deve ser preenchido',
+            'temperamento.required' => 'O campo :attribute deve ser preenchido',
+            'situacao.required' => 'O campo :attribute deve ser preenchido',
+            'historia.required' => 'O campo :attribute deve ser preenchido',
+            'idade.required' => 'O campo :attribute deve ser preenchido',
+            'fotos.required' => 'O campo :attribute deve ser preenchido'
+        ]);
 
         $pet_id = QueroDoar::create([
             'nome' => $request->nome,

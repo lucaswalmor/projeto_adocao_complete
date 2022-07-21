@@ -8,7 +8,7 @@ body {
     background-image: url("https://i.ibb.co/LYVdNJ4/banner-4.png");
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh;
+    height: 100%;
 }
 
 /* FONTS */
@@ -67,6 +67,10 @@ ul li:hover a {
     padding: 20px;
 }
 
+.formulario form .capitalize {
+    text-transform: capitalize;
+}
+
 .botao_cadastrar {
     color: #FCC302;
 }
@@ -74,23 +78,6 @@ ul li:hover a {
 .botao_cadastrar:hover {
     background-color: #333 !important;
     color: #FCC302;
-}
-
-/* FOOTER */
-
-.footer {
-    border-top: 5px solid #F9575C;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #333;
-    color: #FCC302;
-    font-weight: bold;
-}
-
-main {
-    height: 75vh;
 }
 
 @media only screen and (max-width: 375px) {
@@ -127,10 +114,6 @@ main {
         margin-left: 50%;
         color: #FCC302 !important;
     }
-
-    main {
-        height: 100%;
-    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -148,9 +131,5 @@ main {
         width: 200px;
         margin-left: 0;
         color: #FCC302 !important;
-    }
-
-    main {
-        height: 100%;
     }
 }

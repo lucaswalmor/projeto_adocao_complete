@@ -35,15 +35,27 @@ class RegisteredUserController extends Controller
     {
         $request->validate([
             'nome' => ['required', 'string', 'max:255'],
-            'telefone' => ['required', 'string', 'max:11'],
+            'telefone' => ['required', 'string', 'max:15'],
             'instagram' => ['required', 'string', 'max:255'],
-            'cep' => ['required', 'string', 'max:255'],
+            'cep' => ['required', 'string', 'max:9'],
             'rua' => ['required', 'string', 'max:255'],
             'bairro' => ['required', 'string', 'max:255'],
             'cidade' => ['required', 'string', 'max:255'],
-            'numero' => 'required',
+            'numero' => ['required', 'integer'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
+        ],
+        [
+            'nome.required' => 'O campo :attribute deve ser preenchido',
+            'telefone.required' => 'O campo :attribute deve ser preenchido',
+            'instagram.required' => 'O campo :attribute deve ser preenchido',
+            'cep.required' => 'O campo :attribute deve ser preenchido',
+            'rua.required' => 'O campo :attribute deve ser preenchido',
+            'bairro.required' => 'O campo :attribute deve ser preenchido',
+            'cidade.required' => 'O campo :attribute deve ser preenchido',
+            'numero.required' => 'O campo :attribute deve ser preenchido',
+            'email.required' => 'O campo :attribute deve ser preenchido',
+            'password.required' => 'O campo :attribute deve ser preenchido'
         ]);
 
         $user = User::create([
@@ -64,7 +76,7 @@ class RegisteredUserController extends Controller
         event(new Registered($user));
 
         Auth::login($user);
-
-        return redirect(RouteServiceProvider::HOME);
+        
+        return redirect(RouteServiceProvider::HOME)->withErrors(['ok' => 'Cadastro Realizado com sucesso']);
     }
 }

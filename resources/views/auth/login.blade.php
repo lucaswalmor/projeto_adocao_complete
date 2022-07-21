@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="{{ asset('css/estilo.css') }}">
     <link rel="stylesheet" href="{{ asset('css/login.css') }}">
     <link rel="stylesheet" href="{{ asset('css/quero_adotar.css') }}">
@@ -77,7 +79,7 @@
     
     <main>
         <div class="container justify-content-center align-items-center mt-5 d-flex">
-            <div class="login-card">
+            <div class="login-card mb-5">
                 <form class="formulario-login" action="{{ route('login') }}" method="POST">
                     @csrf
                     <div class="col-12 text-center">
@@ -115,17 +117,28 @@
                     </div>
                 </form>
             </div>
-        </div>
-    </main>
-    <footer>
-      <section>
-          <div class="container-fluid footer">
-            <div class="content">
-                Desenvolvido por Lucas Steinbach {{date('d/m/Y');}}
+        </div>  
+        <section>
+            <div class="container-fluid footer">
+              <div class="col-md-12 d-flex footer-flex">
+                <div class="col-md-6 d-flex align-items-center justify-content-center"">                  
+                  Desenvolvido por Lucas Steinbach
+                </div>
+                <div class="col-md-6 d-flex align-items-center justify-content-center">
+                  <div class="col-6 d-flex justify-content-center">
+                    <h5>Contato para desenvolvimento</h5>
+                  </div>
+                  <div class="col-6 d-flex flex-column links-contato">
+                    <span><a href="https://www.instagram.com/lucassteinbach/" target="_blank"><i class="fa-brands fa-instagram"></i>Instagram</a></span>
+                    <span><a href="https://www.facebook.com/lucas.walmor" target="_blank"><i class="fa-brands fa-facebook"></i>Facebook</a></span>
+                    <span><a href="https://api.whatsapp.com/send?phone=5534992021394&text=Ol%C3%A1%20Lucas%2C%20gostaria%20de%20fazer%20um%20or%C3%A7amento%20de%20site." target="_blank"><i class="fa-brands fa-whatsapp"></i>WhatsApp</a></span>
+                    <span><a href="mailto:lucaswsb52@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i>Email</a></span>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-      </section>            
-    </footer>
+        </section> 
+    </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">

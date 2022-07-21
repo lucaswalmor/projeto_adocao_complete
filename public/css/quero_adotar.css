@@ -6,7 +6,6 @@
 
 body {
     background-color: #FBC204;
-    height: 100vh;
 }
 
 .mais_detalhes {
@@ -97,17 +96,4 @@ ul li:hover a {
 
 .card img {
     height: 250px;
-}
-
-/* FOOTER */
-
-.footer {
-    border-top: 5px solid #F9575C;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #333;
-    color: #FCC302;
-    font-weight: bold;
 }

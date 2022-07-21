@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="{{ asset('css/estilo.css') }}">
   <link rel="stylesheet" href="{{ asset('css/quero_doar.css') }}">
   <link rel="stylesheet" href="{{ asset('css/mobile.css') }}">
@@ -88,59 +89,99 @@
             <input type="hidden" name="user_id" value="{{Auth::user()->id}}">
             <div class="row">
               <div class="col-md-4">
-                <input type="text" class="form-control" placeholder="Nome do pet" aria-label="Nome" name="nome" id="nome" required>
+                <input type="text" class="form-control capitalize @error('nome') is-invalid @enderror" placeholder="Nome do pet" aria-label="Nome" name="nome" id="nome" required>
+                @error('nome')
+                    <div class="invalid-feedback">
+                        {{$message}}
+                    </div>    
+                @enderror
               </div>
 
               <div class="col-md-4">
-                <input type="number" class="form-control" placeholder="Idade em anos" aria-label="Idade" name="idade" id="idade">
+                <input type="number" class="form-control @error('idade') is-invalid @enderror" placeholder="Idade em anos" aria-label="Idade" name="idade" id="idade">
+                @error('idade')
+                    <div class="invalid-feedback">
+                        {{$message}}
+                    </div>    
+                @enderror
               </div>
 
               <div class="col-md-4">
-                <input type="text" class="form-control" placeholder="Raça" aria-label="Raça" name="raca" id="raca">
+                <input type="text" class="form-control capitalize @error('raca') is-invalid @enderror" placeholder="Raça" aria-label="Raça" name="raca" id="raca">
+                @error('raca')
+                    <div class="invalid-feedback">
+                        {{$message}}
+                    </div>    
+                @enderror
               </div>
             </div>
 
             <div class="row">
               <div class="col-md-4">
-                <input type="text" class="form-control" placeholder="Cor do pet" aria-label="Cor do pet" name="cor_pelo" id="cor_pelo">
+                <input type="text" class="form-control capitalize @error('cor_pelo') is-invalid @enderror" placeholder="Cor do pet" aria-label="Cor do pet" name="cor_pelo" id="cor_pelo">
+                @error('cor_pelo')
+                    <div class="invalid-feedback">
+                        {{$message}}
+                    </div>    
+                @enderror
               </div>
               <div class="col-md-4">
-                <select class="form-select" name="temperamento" id="temperamento" required>
+                <select class="form-select @error('temperamento') is-invalid @enderror" name="temperamento" id="temperamento" required>
                   <option selected disabled>Temperamento...</option>
                   <option>Dócil</option>
                   <option>Agressivo</option>
                 </select>
+                @error('temperamento')
+                    <div class="invalid-feedback">
+                        {{$message}}
+                    </div>    
+                @enderror
               </div>
               
               <div class="col-md-4">
-                <select class="form-select" name="sexo" required>
+                <select class="form-select @error('sexo') is-invalid @enderror" name="sexo" required>
                   <option selected disabled>Sexo...</option>
                   <option>Macho</option>
                   <option>Fêmea</option>
                 </select>
+                @error('sexo')
+                    <div class="invalid-feedback">
+                        {{$message}}
+                    </div>    
+                @enderror
               </div>
 
             </div>
 
             <div class="row">
               <div class="col-md-4">
-                <select class="form-select" name="porte" id="porte" required>
+                <select class="form-select @error('porte') is-invalid @enderror" name="porte" id="porte" required>
                   <option selected disabled>Porte...</option>
                   <option>Grande</option>
                   <option>Médio</option>
                   <option>Pequeno</option>
                 </select>
+                @error('porte')
+                    <div class="invalid-feedback">
+                        {{$message}}
+                    </div>    
+                @enderror
               </div>
               <div class="col-md-4">
-                <select class="form-select" name="pelagem" id="pelagem" required>
+                <select class="form-select @error('pelagem') is-invalid @enderror" name="pelagem" id="pelagem" required>
                   <option selected disabled>Pelagem...</option>
                   <option>Grande</option>
                   <option>Média</option>
                   <option>Curta</option>
                 </select>
+                @error('pelagem')
+                    <div class="invalid-feedback">
+                        {{$message}}
+                    </div>    
+                @enderror
               </div>
               <div class="col-md-4">
-                <select class="form-select" name="especie" id="especie" required>
+                <select class="form-select @error('especie') is-invalid @enderror" name="especie" id="especie" required>
                   <option selected disabled>Espécie...</option>
                   <option>Canino</option>
                   <option>Felino</option>
@@ -148,25 +189,45 @@
                   <option>Réptil</option>
                   <option>Ave</option>
                 </select>
+                @error('especie')
+                    <div class="invalid-feedback">
+                        {{$message}}
+                    </div>    
+                @enderror
               </div>
             </div>
 
             <div class="row">
               <div class="">
-                <textarea class="form-control" placeholder="Situação (informar se as vacinas estão em dia, se o pet esta bem de saúde e etc)" id="situacao" name="situacao" required></textarea>
+                <textarea class="form-control @error('situacao') is-invalid @enderror" placeholder="Situação (informar se as vacinas estão em dia, se o pet esta bem de saúde e etc)" id="situacao" name="situacao" required></textarea>
+                @error('situacao')
+                    <div class="invalid-feedback">
+                        {{$message}}
+                    </div>    
+                @enderror
               </div>
             </div>
 
             <div class="row">
               <div class="">
-                <textarea class="form-control" placeholder="Conte-nos um pouco sobre a história do pet para que seu próximo dono conheça ele um pouco mais" id="historia" name="historia"></textarea>
+                <textarea class="form-control @error('historia') is-invalid @enderror" placeholder="Conte-nos um pouco sobre a história do pet para que seu próximo dono conheça ele um pouco mais" id="historia" name="historia"></textarea>
+                @error('historia')
+                    <div class="invalid-feedback">
+                        {{$message}}
+                    </div>    
+                @enderror
               </div>
             </div>
 
             <div class="row mt-2">
               <div class="">
                 <label for="fotos" class="form-label">Fotos do pet</label>
-                <input class="form-control" type="file" id="fotos" name="fotos[]"  multiple="multiple" required  accept="image/gif, image/png, image/jpeg, image/pjpeg">
+                <input class="form-control @error('fotos') is-invalid @enderror" type="file" id="fotos" name="fotos[]"  multiple="multiple" required  accept="image/gif, image/png, image/jpeg, image/pjpeg">
+                @error('fotos')
+                    <div class="invalid-feedback">
+                        {{$message}}
+                    </div>    
+                @enderror
               </div>
             </div>
 
@@ -178,19 +239,28 @@
           </form>
         </div>
       </div>
-    </section>
-  </main>
-  <footer>
+    </section>  
     <section>
-        <div class="container-fluid footer ">
-          <div class="content">
-            Desenvolvido por Lucas Steinbach {{date('d/m/Y');}}
+        <div class="container-fluid footer">
+          <div class="col-md-12 d-flex footer-flex">
+            <div class="col-md-6 d-flex align-items-center justify-content-center"">                  
+              Desenvolvido por Lucas Steinbach
+            </div>
+            <div class="col-md-6 d-flex align-items-center justify-content-center">
+              <div class="col-6 d-flex justify-content-center">
+                <h5>Contato para desenvolvimento</h5>
+              </div>
+              <div class="col-6 d-flex flex-column links-contato">
+                <span><a href="https://www.instagram.com/lucassteinbach/" target="_blank"><i class="fa-brands fa-instagram"></i>Instagram</a></span>
+                <span><a href="https://www.facebook.com/lucas.walmor" target="_blank"><i class="fa-brands fa-facebook"></i>Facebook</a></span>
+                <span><a href="https://api.whatsapp.com/send?phone=5534992021394&text=Ol%C3%A1%20Lucas%2C%20gostaria%20de%20fazer%20um%20or%C3%A7amento%20de%20site." target="_blank"><i class="fa-brands fa-whatsapp"></i>WhatsApp</a></span>
+                <span><a href="mailto:lucaswsb52@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i>Email</a></span>
+              </div>
+            </div>
           </div>
         </div>
-    </section>            
-  </footer>
-  
-  <script src="{{ asset('js/validate_input.js') }}"></script>
+    </section> 
+  </main>
   <script src="{{ asset('js/show_images.js') }}"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">

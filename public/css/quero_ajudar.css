@@ -99,18 +99,6 @@ table a:hover {
     color: #ce9f07;
     cursor: pointer;
 }
-/* FOOTER */
-
-.footer {
-    border-top: 5px solid #F9575C;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #333;
-    color: #FCC302;
-    font-weight: bold;
-}
 
 @media only screen and (max-width: 375px) {
 
@@ -226,9 +214,5 @@ table a:hover {
     .sobre-nos {
         width: auto;
         margin: 20px;
-    }
-
-    main {
-        height: 100%;
     }
 }
