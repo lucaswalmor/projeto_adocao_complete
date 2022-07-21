@@ -1,0 +1,39 @@
+body {
+    background: none;
+}
+
+.tabela > thead {
+    background-color: #333;
+    color: #FBC204;
+}
+
+.detalhes-img {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.botao_adotar {
+    background-color: #333 !important;
+    color: #FCC302;
+    font-weight: bold;
+}
+
+.botao_adotar:hover {
+    background-color: rgb(75, 75, 75) !important;
+    color: #FCC302;
+}
+
+.card_detalhes {
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    height: 256px;
+}
+
+.input-detalhes {
+    margin: 0 !important;
+}
+
+.modal-title {
+    color: #333 !important;
+}

@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("https://i.ibb.co/LYVdNJ4/banner-4.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/* HEADER  */
+
+header {
+    border-bottom: 5px solid #F9575C;
+    font-family: 'Quicksand', sans-serif;
+}
+
+header .text-header {
+    font-weight: bold;
+    text-align: center;
+    color: #FCC302;
+}
+
+header .text-header h3,
+h5 {
+    font-weight: bold;
+}
+
+.logo {
+    width: 200px;
+    margin-left: 20%;
+    color: #FCC302 !important;
+}
+
+ul li {
+    padding: 10px;
+    font-weight: 700;
+    font-size: 16px;
+    transition: all 0.8s;
+}
+
+ul li:hover {
+    border-radius: 355px 45px 225px 75px/15px 225px 15px 255px;
+    background-color: #FCC302;
+    color: #fff !important;
+}
+
+ul li:hover a {
+    color: #fff !important;
+}
+
+/* CONTEUDO */
+
+.formulario {
+    width: 50%;
+}
+
+.formulario form {
+    border-radius: 355px 45px 225px 75px/15px 225px 15px 255px;
+    border: 2px solid #F9575C;
+    padding: 20px;
+}
+
+.botao_cadastrar {
+    color: #FCC302;
+}
+
+.botao_cadastrar:hover {
+    background-color: #333 !important;
+    color: #FCC302;
+}
+
+/* FOOTER */
+
+.footer {
+    border-top: 5px solid #F9575C;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    color: #FCC302;
+    font-weight: bold;
+}
+
+main {
+    height: 75vh;
+}
+
+@media only screen and (max-width: 375px) {
+
+    body {
+        background-color: #FBC204;
+    }
+
+    .sobre-nos {
+        width: auto;
+        margin: 20px;
+    }
+
+    .principal {
+        flex-direction: row;
+    }
+
+    .logo {
+        width: 200px;
+        margin-left: 40%;
+        color: #FCC302 !important;
+    }
+
+    .navbar-dark .navbar-toggler {
+        margin-bottom: 5%;
+    }
+
+    .formulario {
+        width: 100%;
+    }
+
+    .logo {
+        width: 200px;
+        margin-left: 50%;
+        color: #FCC302 !important;
+    }
+
+    main {
+        height: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    body {
+        background-color: #FBC204;
+        height: 100%;
+    }
+
+    .formulario {
+        width: 100%;
+    }
+
+    .logo {
+        width: 200px;
+        margin-left: 0;
+        color: #FCC302 !important;
+    }
+
+    main {
+        height: 100%;
+    }
+}

@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {    
+    background-image: url("https://i.ibb.co/LYVdNJ4/banner-4.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+input, select, textarea {
+    margin-bottom: 10px;
+}
+
+/* FONTS */
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+    
+/* HEADER  */
+
+header {
+    border-bottom: 5px solid #F9575C;
+    font-family: 'Quicksand', sans-serif;
+}
+
+header .text-header {
+    font-weight: bold;
+    text-align: center;
+    color: #FCC302;
+}
+
+header .text-header h3, h5 {
+    font-weight: bold;
+}
+
+.logo {
+    width: 200px;
+    margin-left: 20%;
+    color: #FCC302 !important;
+}
+
+ul li {
+    padding: 10px;
+    font-weight: 700;
+    font-size: 16px;
+    transition: all 0.8s;
+}
+
+ul li:hover {
+    border-radius: 355px 45px 225px 75px/15px 225px 15px 255px;
+    background-color: #FCC302;
+    color: #fff !important;
+}
+
+ul li:hover a{
+    color: #fff !important;
+}
+
+/* conteudo */
+
+.principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.principal button {
+    margin: 10px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    font-size: 25px;
+    transition: all 0.8s;
+    border: 1px solid #F9575C;
+    border-radius: 355px 45px 225px 75px/15px 225px 15px 255px;
+}
+
+.principal button:hover {
+    border-radius: 355px 45px 225px 75px/15px 225px 15px 255px;
+    background-color: #F9575C;
+}
+
+.principal button:hover span {
+    color: #fff !important;
+    transition: all 0.8s;
+}
+
+.principal button img{
+    width: 100px;
+}
+
+span {
+    color: #333!important;
+    font-weight: bold;
+}
+
+.sobre-nos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 100px;
+    width: 750px;
+}
+
+.sobre-nos h3 {
+    color: #333;
+    font-weight: bold;
+}
+
+/* FOOTER */
+
+.footer {
+    border-top: 5px solid #F9575C;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    color: #FCC302;
+    font-weight: bold;
+}
+
+/* BOOTSTRAP EDIT */
+.navbar {
+    padding: 0;
+}
+
+.navbar-collapse {
+    flex-grow: 0;
+}
+
+.nav-link {    
+    color: #FCC302;
+}
+
+@media only screen and (max-width: 425px){
+    .logo {
+        width: 200px;
+        margin-left: 50%;
+        color: #FCC302 !important;
+    }
+}

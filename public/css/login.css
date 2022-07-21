@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FBC204;
+    height: 100vh;
+}
+
+.login-card {
+    height: 50%;
+    width: 30%;
+    background-color: #333;
+    border-radius: 20px;
+}
+
+.formulario-login {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px;
+    color: #FBC204;
+    font-weight: bold;
+}
+
+.teste {
+    display: flex;
+    justify-content: center;
+    margin: 0 50px;
+    color: #FBC204;
+    font-weight: bold;
+}
+
+.formulario-login input {
+    background-color: transparent;
+    border: 1px solid #FBC204;
+    color: #FBC204 !important;
+}
+
+.formulario-login input:focus {
+    background-color: transparent;
+    border: 1px solid #FBC204;
+}
+
+.botao_registrar {
+    display: inline-block;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    background-color: #FCC302 !important;
+    color: #333;
+    font-weight: bold !important;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.botao_login {
+    background-color: #FCC302 !important;
+    color: #333;
+}
+
+.botao_login:hover {
+    background-color: #d4a407 !important;
+    color: rgb(65, 64, 64);
+}
+
+.esqueceu_senha {
+    text-decoration: none;
+    color: #d4a407;
+}
+
+/* FOOTER */
+
+.footer {
+    border-top: 5px solid #F9575C;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    color: #FCC302;
+    font-weight: bold;
+}
+
+main {
+    height: 70vh;
+}
+
+@media only screen and (max-width: 375px) {
+    .login-card {
+        height: auto;
+        width: auto;
+        margin-top: -45px;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .login-card {
+        height: auto;
+        width: auto;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .login-card {
+        height: auto;
+        width: auto;
+    }
+}

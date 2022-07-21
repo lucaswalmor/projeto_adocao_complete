@@ -1,0 +1,101 @@
+@media only screen and (max-width: 375px) {
+
+    body {
+        /* background-image: url("https://i.ibb.co/K9Yq7xq/background-mobile-2.jpg");
+        background-size: cover;
+        background-repeat: no-repeat; */
+        background-color: #FBC204;
+        height: 100%;
+    }
+
+    .sobre-nos {
+        width: auto;
+        margin: 20px;
+    }
+
+    .principal {
+        flex-direction: row;
+    }
+
+    .logo {
+        width: 200px;
+        margin-left: 30%;
+        color: #FCC302 !important;
+    }
+
+    .navbar-dark .navbar-toggler {
+        margin-bottom: 5%;
+    }
+
+    /* QUERO AJUDAR */
+
+    .formas-pagamento {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .nubank {
+        text-align: center;
+        width: 400px;
+        margin-top: 10px;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+
+    body {
+        /* background-image: url("https://i.ibb.co/K9Yq7xq/background-mobile-2.jpg");
+        background-size: cover;
+        background-repeat: no-repeat; */
+        background-color: #FBC204;
+        height: 100%;
+    }
+
+    .logo {
+        width: 200px;
+        margin-left: 40%;
+        color: #FCC302 !important;
+    }
+
+    .sobre-nos {
+        width: auto;
+        margin: 20px;
+    }
+
+    .principal {
+        flex-direction: column;
+    }
+
+    .navbar-dark .navbar-toggler {
+        margin-bottom: 5%;
+    }
+
+    /* QUERO AJUDAR */
+
+    .formas-pagamento {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .nubank {
+        text-align: center;
+        width: 400px;
+        margin-top: 10px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    body {
+        /* background-image: url("https://i.ibb.co/K9Yq7xq/background-mobile-2.jpg");
+        background-size: cover;
+        background-repeat: no-repeat; */
+        background-color: #FBC204;
+        height: 100%;
+    }
+
+    .sobre-nos {
+        width: auto;
+        margin: 20px;
+    }
+}
