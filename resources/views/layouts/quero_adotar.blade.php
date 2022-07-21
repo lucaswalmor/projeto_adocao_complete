@@ -75,6 +75,14 @@
     <main>
         <section class="mt-5">
             <div class="container-fluid containerCards">
+                {{-- MENSAGEM DE CADASTRO REALIZADO COM SUCESSO --}}
+                @if($errors->any())
+                  <div class="alerta">
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                      <h4>{{$errors->first()}}</h4>                  
+                    </div>
+                  </div>              
+                @endif
                 <input type="hidden" name="id_mais_detalhes" id="id_mais_detalhes">
                 @foreach ($pets as $item)
                     @php
@@ -91,8 +99,19 @@
                             </div>
                         </div>   
                         <div class="card-body text-white bg-dark">
-                            <h5 class="card-title">{{ $item->nome}}</h5>
-                            <a href="{{ route('mais_detalhes', $item->pet_id)}}" class="mais_detalhes">Mais detalhes</a>
+                            <div class="col-12">
+                                <h5 class="card-title">{{ $item->nome}}</h5>
+                            </div>
+                            <div class="col-12 d-flex">
+                                <div class="col-6">
+                                    <a href="{{ route('mais_detalhes', $item->pet_id)}}" class="mais_detalhes">Detalhes</a>
+                                </div>
+                                <div class="col-6">
+                                    @if (Auth::user()->id == $item->user_id)
+                                        <a href="{{ route('delete', $item->pet_id)}}" class="mais_detalhes">Remover Pet</a>
+                                    @endif
+                                </div>
+                            </div>
                         </div>
                     </div>
                 @endforeach
@@ -100,7 +119,7 @@
         </section>  
         <section>
             <div class="container-fluid footer">
-              <div class="col-md-12 d-flex footer-flex">
+                <div class="col-md-12 d-flex footer-flex mt-3">
                 <div class="col-md-6 d-flex align-items-center justify-content-center"">                  
                   Desenvolvido por Lucas Steinbach
                 </div>

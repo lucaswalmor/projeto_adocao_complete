@@ -75,6 +75,15 @@
     color: #d4a407;
 }
 
+.esqueceu_senha:hover {
+    text-decoration: none;
+    color: #d4a407;
+}
+
+.form-check-label {
+    cursor: pointer;
+}
+
 @media only screen and (max-width: 375px) {
     .login-card {
         height: auto;

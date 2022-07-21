@@ -143,12 +143,22 @@
                 <h3>COMO ATUAMOS</h3>
                 <p>
                     Nosso site funciona como ponte ao facilitar que o pet chegue ao lar definitivo sendo acolhido como um novo membro da família.
+
+                    Todas as áreas do site necessita que você esteja logado, pois precisamos de seus dados para sabermos quem esta adotando ou doando um pet,
+                    entao registre-se e faça parte deste bem.
+
+                    Aqui você poderá acessar a página de doação caso queira doar algum pet, nela haverá um formulário de cadastro para você registrar o pet com todas
+                    as informações, para que a pessoa interessada em doar ele consiga conhece-lo antes. <br>
+                    Temos também a página de adoção que trará todos os pets que estarão para adoção, nesta página estará a primeira foto do pet, terá como você acessar
+                    as informações do pet para saber mais sobre ele, nesta página também haverá um botão de "QUERO ADOTAR" que conterá todas as inforações do doador,
+                    para que você possa entrar em contato e adotar seu pet.
+
                 </p>
             </div>
         </section>   
         <section>
             <div class="container-fluid footer">
-              <div class="col-md-12 d-flex footer-flex">
+              <div class="col-md-12 d-flex footer-flex mt-3">
                 <div class="col-md-6 d-flex align-items-center justify-content-center"">                  
                   Desenvolvido por Lucas Steinbach
                 </div>

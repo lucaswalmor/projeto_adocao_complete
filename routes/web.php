@@ -28,6 +28,7 @@ Route::controller(QueroDoarController::class)->group(function () {
 Route::controller(QueroAdotarController::class)->group(function () {
     Route::get('/quero_adotar', 'queroAdotar')->name('quero_adotar');
     Route::get('/mais_detalhes/{pet_id}', 'maisDetalhes')->name('mais_detalhes');
+    Route::get('/delete/{pet_id}', 'removerPet')->name('delete');
 });
 
 Route::get('/quero_ajudar', [QueroAjudarController::class, 'queroAjudar'])->name('quero_ajudar');

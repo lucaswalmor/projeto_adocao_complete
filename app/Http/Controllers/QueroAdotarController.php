@@ -19,4 +19,12 @@ class QueroAdotarController extends Controller
         
         return view('layouts.detalhes', compact('detalhes'));
     }
+
+    public function removerPet($pet_id) {
+        $detalhes = Fotos::select('*')->join('pet as P', 'P.id', 'fotos.pet_id')
+        ->join('users as U', 'U.id', 'fotos.user_id')
+        ->where('P.id', $pet_id)->delete();
+        
+        return redirect()->back()->withErrors(['deletado' => 'Pet removido com sucesso!']);
+    }
 }

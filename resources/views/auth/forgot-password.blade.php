@@ -88,20 +88,33 @@
                       <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" autofocus>
                     </div>
                     <div class="mb-3 col-12 row">
-                        <button type="submit" class="btn botao_login">Enviar email para trocar de senha</button>
+                        <button type="submit" class="btn botao_login">Enviar Email</button>
                     </div>
                 </form>
             </div>
         </div>
     </main>
     <footer>
-      <section>
-          <div class="container-fluid footer">
-            <div class="content">
-                Desenvolvido por Lucas Steinbach {{date('d/m/Y');}}
+        <section>
+            <div class="container-fluid footer fixed-bottom">
+                <div class="col-md-12 d-flex footer-flex mt-3">
+                <div class="col-md-6 d-flex align-items-center justify-content-center">                  
+                  Desenvolvido por Lucas Steinbach
+                </div>
+                <div class="col-md-6 d-flex align-items-center justify-content-center">
+                  <div class="col-6 d-flex justify-content-center">
+                    <h5>Contato para desenvolvimento</h5>
+                  </div>
+                  <div class="col-6 d-flex flex-column links-contato">
+                    <span><a href="https://www.instagram.com/lucassteinbach/" target="_blank"><i class="fa-brands fa-instagram"></i>Instagram</a></span>
+                    <span><a href="https://www.facebook.com/lucas.walmor" target="_blank"><i class="fa-brands fa-facebook"></i>Facebook</a></span>
+                    <span><a href="https://api.whatsapp.com/send?phone=5534992021394&text=Ol%C3%A1%20Lucas%2C%20gostaria%20de%20fazer%20um%20or%C3%A7amento%20de%20site." target="_blank"><i class="fa-brands fa-whatsapp"></i>WhatsApp</a></span>
+                    <span><a href="mailto:lucaswsb52@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i>Email</a></span>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-      </section>            
+        </section>      
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
