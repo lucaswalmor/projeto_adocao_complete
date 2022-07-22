@@ -14,9 +14,8 @@ class Authenticate extends Middleware
      */
     protected function redirectTo($request)
     {
-        dd($request->all());
         if (! $request->expectsJson()) {
-            return route('login');
+            return redirect()->route('login')->withErrors(['erro_login' => 'Login/Senha inválido']);
         }
     }
 }

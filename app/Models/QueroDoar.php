@@ -10,5 +10,5 @@ class QueroDoar extends Model
     use HasFactory;
     protected $table = 'pet';
     protected $fillable = ['nome', 'especie', 'raca', 'porte', 'pelagem', 'user_id',
-    'cor_pelo', 'sexo', 'temperamento', 'situacao', 'historia', 'idade', 'fotos'];
+    'cor_pelo', 'sexo', 'temperamento', 'situacao', 'historia', 'idade', 'idade_tipo', 'fotos'];
 }

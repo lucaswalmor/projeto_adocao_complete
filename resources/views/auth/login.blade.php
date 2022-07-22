@@ -85,6 +85,14 @@
                     <div class="col-12 text-center">
                         <h3>Login</h3>
                     </div>
+                    {{-- MENSAGEM DE CADASTRO REALIZADO COM SUCESSO --}}
+                    @if($errors->any())
+                      <div class="alerta">
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                          <h4>{{$errors->first()}}</h4>                  
+                        </div>
+                      </div>              
+                    @endif
                     <div class="mb-3 col-12">
                       <label for="email" class="form-label">Email</label>
                       <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" autofocus>
@@ -111,16 +119,15 @@
                                 </a>
                             @endif
                         </div>
-                        
                         <a href="{{ route('register') }}" class="botao_registrar mb-3"><button type="button" class="btn">Registrar-se</button></a> 
                         <button type="submit" class="btn botao_login">Entrar</button>
                     </div>
                 </form>
             </div>
-        </div>  
+        </div>
         <section>
             <div class="container-fluid footer">
-                <div class="col-md-12 d-flex footer-flex mt-3">
+                <div class="col-md-12 d-flex footer-flex">
                 <div class="col-md-6 d-flex align-items-center justify-content-center">                  
                   Desenvolvido por Lucas Steinbach
                 </div>

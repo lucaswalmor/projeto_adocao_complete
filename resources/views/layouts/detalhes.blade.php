@@ -205,7 +205,7 @@
                                     </tr>
                                     <tr>
                                         <th>Idade:</th>
-                                        <td>{{ $item->idade }}</td>
+                                        <td>{{ $item->idade }} {{ $item->idade_tipo}}</td>
                                     </tr>
                                     <tr>
                                         <th>Cor:</th>
@@ -227,6 +227,7 @@
                 </div>
             </div>
         </section>  
+
         <section>
             <div class="container-fluid footer">
                 <div class="col-md-12 d-flex footer-flex mt-3">

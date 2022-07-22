@@ -27,6 +27,7 @@ class CreatePet extends Migration
             $table->string('situacao');
             $table->text('historia');
             $table->integer('idade');
+            $table->string('idade_tipo');
             $table->timestamps();
             $table->softDeletes();
         });

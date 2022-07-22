@@ -119,7 +119,7 @@
         </section>  
         <section>
             <div class="container-fluid footer">
-                <div class="col-md-12 d-flex footer-flex mt-3">
+                <div class="col-md-12 d-flex footer-flex">
                 <div class="col-md-6 d-flex align-items-center justify-content-center"">                  
                   Desenvolvido por Lucas Steinbach
                 </div>

@@ -28,6 +28,7 @@ class QueroDoarController extends Controller
             'situacao' => ['required', 'string', 'max:255'],
             'historia' => ['required', 'string', 'max:255'],
             'idade' => ['required', 'string', 'max:255'],
+            'idade_tipo' => ['required', 'string', 'max:255'],
             'fotos' => ['required']
         ],
         [
@@ -42,6 +43,7 @@ class QueroDoarController extends Controller
             'situacao.required' => 'O campo :attribute deve ser preenchido',
             'historia.required' => 'O campo :attribute deve ser preenchido',
             'idade.required' => 'O campo :attribute deve ser preenchido',
+            'idade_tipo.required' => 'O campo Tipo de idade deve ser preenchido',
             'fotos.required' => 'O campo :attribute deve ser preenchido'
         ]);
 
@@ -57,7 +59,8 @@ class QueroDoarController extends Controller
             'temperamento' => $request->temperamento,
             'situacao' => $request->situacao,
             'historia' => $request->historia,
-            'idade' => $request->idade
+            'idade' => $request->idade,
+            'idade_tipo' => $request->idade_tipo
         ]);
 
         $fotos = $request->fotos;

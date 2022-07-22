@@ -107,8 +107,12 @@
               </div>
 
               <div class="col-md-4">
-                <input type="text" class="form-control capitalize @error('raca') is-invalid @enderror" placeholder="Raça" aria-label="Raça" name="raca" id="raca">
-                @error('raca')
+                <select class="form-select @error('idade_tipo') is-invalid @enderror" name="idade_tipo" id="idade_tipo" required>
+                  <option selected disabled>...</option>
+                  <option>Anos</option>
+                  <option>Meses</option>
+                </select>
+                @error('idade_tipo')
                     <div class="invalid-feedback">
                         {{$message}}
                     </div>    
@@ -117,6 +121,15 @@
             </div>
 
             <div class="row">
+
+              <div class="col-md-4">
+                <input type="text" class="form-control capitalize @error('raca') is-invalid @enderror" placeholder="Raça" aria-label="Raça" name="raca" id="raca">
+                @error('raca')
+                    <div class="invalid-feedback">
+                        {{$message}}
+                    </div>    
+                @enderror
+              </div>
               <div class="col-md-4">
                 <input type="text" class="form-control capitalize @error('cor_pelo') is-invalid @enderror" placeholder="Cor do pet" aria-label="Cor do pet" name="cor_pelo" id="cor_pelo">
                 @error('cor_pelo')
@@ -137,8 +150,10 @@
                     </div>    
                 @enderror
               </div>
-              
-              <div class="col-md-4">
+            </div>
+
+            <div class="row">              
+              <div class="col-md-3">
                 <select class="form-select @error('sexo') is-invalid @enderror" name="sexo" required>
                   <option selected disabled>Sexo...</option>
                   <option>Macho</option>
@@ -150,11 +165,7 @@
                     </div>    
                 @enderror
               </div>
-
-            </div>
-
-            <div class="row">
-              <div class="col-md-4">
+              <div class="col-md-3">
                 <select class="form-select @error('porte') is-invalid @enderror" name="porte" id="porte" required>
                   <option selected disabled>Porte...</option>
                   <option>Grande</option>
@@ -167,7 +178,7 @@
                     </div>    
                 @enderror
               </div>
-              <div class="col-md-4">
+              <div class="col-md-3">
                 <select class="form-select @error('pelagem') is-invalid @enderror" name="pelagem" id="pelagem" required>
                   <option selected disabled>Pelagem...</option>
                   <option>Grande</option>
@@ -180,7 +191,7 @@
                     </div>    
                 @enderror
               </div>
-              <div class="col-md-4">
+              <div class="col-md-3">
                 <select class="form-select @error('especie') is-invalid @enderror" name="especie" id="especie" required>
                   <option selected disabled>Espécie...</option>
                   <option>Canino</option>
@@ -242,7 +253,7 @@
     </section>  
     <section>
         <div class="container-fluid footer">
-          <div class="col-md-12 d-flex footer-flex mt-3">
+          <div class="col-md-12 d-flex footer-flex">
             <div class="col-md-6 d-flex align-items-center justify-content-center"">                  
               Desenvolvido por Lucas Steinbach
             </div>
