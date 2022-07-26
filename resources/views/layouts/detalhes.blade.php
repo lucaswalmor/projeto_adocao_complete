@@ -50,7 +50,7 @@
                             @endauth
                         @endif
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Quero Adotar</a>
+                            <a class="nav-link" href="{{ route('quero_adotar') }}">Quero Adotar</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('quero_ajudar') }}">Quero Ajudar</a>
@@ -177,7 +177,7 @@
                                 @foreach ($detalhes as $item)
                                     <tr>
                                         <th>Nome:</th>
-                                        <td>{{ $item->nome }}</td>
+                                        <td>{{ $item->nome_pet }}</td>
                                     </tr>
                                     <tr>
                                         <th>Espécie:</th>
@@ -215,12 +215,19 @@
                                         <th>Pelagem:</th>
                                         <td>{{ $item->pelagem }}</td>
                                     </tr>
+                                    @if (Auth::user()->id == $item->user_id)
+                                        <tr>
+                                            <td colspan="2">
+                                                <a href="{{ route('editar_detalhes', $item->pet_id) }}"><button class="btn col-12 botao_adotar">Editar Informações</button></a>
+                                            </td>
+                                        </tr>
+                                    @endif
                                 @endforeach
 
                             </tbody>
                         </table>
 
-                        <button class="btn col-12 botao_adotar" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <button class="btn col-12 botao_adotar mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
                             Quero Adotar
                         </button>
                     </div>

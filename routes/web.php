@@ -29,6 +29,8 @@ Route::controller(QueroAdotarController::class)->group(function () {
     Route::get('/quero_adotar', 'queroAdotar')->name('quero_adotar');
     Route::post('/quero_adotar', 'filtro')->name('quero_adotar_filtro');
     Route::get('/mais_detalhes/{pet_id}', 'maisDetalhes')->name('mais_detalhes');
+    Route::get('/editar_detalhes/{pet_id}', 'editarDetalhes')->name('editar_detalhes');
+    Route::post('/update_detalhes', 'updateDetalhes')->name('update_detalhes');
     Route::get('/delete/{pet_id}', 'removerPet')->name('delete');
 });
 

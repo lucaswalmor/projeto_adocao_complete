@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="{{ asset('css/estilo.css') }}">
     <link rel="stylesheet" href="{{ asset('css/quero_adotar.css') }}">
     <link rel="stylesheet" href="{{ asset('css/mobile.css') }}">
@@ -71,18 +73,19 @@
             </div>
         </nav>
     </header>
-    
+
     <main>
         <section class="mt-2">
-            @if($errors->any())
-                <div class="alerta">
+            @if ($errors->any())
+                <div class="alerta" id="alerta">
                     <div class="alert alert-success alert-dismissible fade show" role="alert">
-                    <h4>{{$errors->first()}}</h4>                  
+                        <h4>{{ $errors->first() }}</h4>
                     </div>
-                </div>              
+                </div>
             @endif
             <div class="container mt-3">
-                <form class="row g-3 needs-validation col-md-12" novalidate action="{{ route('quero_adotar_filtro') }}" method="POST">
+                <form class="row g-3 needs-validation col-md-12" novalidate action="{{ route('quero_adotar_filtro') }}"
+                    method="POST">
                     @csrf
                     <div class="row mt-2">
                         <h6>Selecione uma espécie</h6>
@@ -90,17 +93,17 @@
                     <div class="row">
                         <div class="col-md-4">
                             <select class="form-select" name="filtro" id="filtro" required>
-                              <option selected disabled>Espécie...</option>
-                              <option>Canino</option>
-                              <option>Felino</option>
-                              <option>Roedor</option>
-                              <option>Réptil</option>
-                              <option>Ave</option>
+                                <option selected disabled>Espécie...</option>
+                                <option>Canino</option>
+                                <option>Felino</option>
+                                <option>Roedor</option>
+                                <option>Réptil</option>
+                                <option>Ave</option>
                             </select>
                         </div>
                         <div class="col-md-3">
                             <button class="btn bg-dark botao_cadastrar">
-                               Pesquisar
+                                Pesquisar
                             </button>
                         </div>
                     </div>
@@ -118,22 +121,25 @@
                             <div class="carousel-inner">
                                 @foreach ($foto as $array)
                                     <div class="carousel-item active">
-                                        <img src="{{ asset('storage/pets/' . $item->pet_id . '/' . $array )}}" class="d-block w-100" alt="...">
-                                    </div>                          
-                                @endforeach              
+                                        <img src="{{ asset('storage/pets/' . $item->pet_id . '/' . $array) }}"
+                                            class="d-block w-100" alt="...">
+                                    </div>
+                                @endforeach
                             </div>
-                        </div>   
+                        </div>
                         <div class="card-body text-white bg-dark">
                             <div class="col-12">
-                                <h5 class="card-title">{{ $item->nome}}</h5>
+                                <h5 class="card-title">{{ $item->nome }}</h5>
                             </div>
                             <div class="col-12 d-flex">
                                 <div class="col-6">
-                                    <a href="{{ route('mais_detalhes', $item->pet_id)}}" class="mais_detalhes">Detalhes</a>
+                                    <a href="{{ route('mais_detalhes', $item->pet_id) }}"
+                                        class="mais_detalhes">Detalhes</a>
                                 </div>
                                 <div class="col-6">
                                     @if (Auth::user()->id == $item->user_id)
-                                        <a href="{{ route('delete', $item->pet_id)}}" class="mais_detalhes">Remover Pet</a>
+                                        <a href="{{ route('delete', $item->pet_id) }}" class="mais_detalhes">Remover
+                                            Pet</a>
                                     @endif
                                 </div>
                             </div>
@@ -143,33 +149,44 @@
 
                 {{-- {{ $pets->links() }} --}}
             </div>
-        </section>  
+        </section>
 
         <section>
             <div class="container-fluid footer">
-              <div class="col-md-12 d-flex footer-flex">
-                <div class="col-md-6 d-flex align-items-center justify-content-center">                  
-                  Parceiros
+                <div class="col-md-12 d-flex footer-flex">
+                    <div class="col-md-6 d-flex align-items-center justify-content-center">
+                        Parceiros
+                    </div>
+                    <div class="col-md-6 d-flex align-items-center justify-content-center">
+                        <div class="col-6 d-flex justify-content-center">
+                            Desenvolvido por Lucas Steinbach <br>
+                            Contato para desenvolvimento ->
+                        </div>
+                        <div class="col-6 d-flex flex-column links-contato">
+                            <span><a href="https://www.instagram.com/lucassteinbach/" target="_blank"><i
+                                        class="fa-brands fa-instagram"></i>Instagram</a></span>
+                            <span><a href="https://www.facebook.com/lucas.walmor" target="_blank"><i
+                                        class="fa-brands fa-facebook"></i>Facebook</a></span>
+                            <span><a href="https://api.whatsapp.com/send?phone=5534992021394&text=Ol%C3%A1%20Lucas%2C%20gostaria%20de%20fazer%20um%20or%C3%A7amento%20de%20site."
+                                    target="_blank"><i class="fa-brands fa-whatsapp"></i>WhatsApp</a></span>
+                            <span><a href="mailto:lucaswsb52@gmail.com" target="_blank"><i
+                                        class="fa-solid fa-envelope"></i>Email</a></span>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-6 d-flex align-items-center justify-content-center">
-                  <div class="col-6 d-flex justify-content-center">              
-                    Desenvolvido por Lucas Steinbach <br>
-                    Contato para desenvolvimento ->
-                  </div>
-                  <div class="col-6 d-flex flex-column links-contato">
-                    <span><a href="https://www.instagram.com/lucassteinbach/" target="_blank"><i class="fa-brands fa-instagram"></i>Instagram</a></span>
-                    <span><a href="https://www.facebook.com/lucas.walmor" target="_blank"><i class="fa-brands fa-facebook"></i>Facebook</a></span>
-                    <span><a href="https://api.whatsapp.com/send?phone=5534992021394&text=Ol%C3%A1%20Lucas%2C%20gostaria%20de%20fazer%20um%20or%C3%A7amento%20de%20site." target="_blank"><i class="fa-brands fa-whatsapp"></i>WhatsApp</a></span>
-                    <span><a href="mailto:lucaswsb52@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i>Email</a></span>
-                  </div>
-                </div>
-              </div>
             </div>
-        </section>  
+        </section>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            $("#alerta").fadeIn(300).delay(2000).fadeOut(400);
+        });
     </script>
 
 </body>
