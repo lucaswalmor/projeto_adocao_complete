@@ -230,13 +230,14 @@
 
         <section>
             <div class="container-fluid footer">
-                <div class="col-md-12 d-flex footer-flex mt-3">
-                <div class="col-md-6 d-flex align-items-center justify-content-center"">                  
-                  Desenvolvido por Lucas Steinbach
+              <div class="col-md-12 d-flex footer-flex">
+                <div class="col-md-6 d-flex align-items-center justify-content-center">                  
+                  Parceiros
                 </div>
                 <div class="col-md-6 d-flex align-items-center justify-content-center">
-                  <div class="col-6 d-flex justify-content-center">
-                    <h5>Contato para desenvolvimento</h5>
+                  <div class="col-6 d-flex justify-content-center">              
+                    Desenvolvido por Lucas Steinbach <br>
+                    Contato para desenvolvimento ->
                   </div>
                   <div class="col-6 d-flex flex-column links-contato">
                     <span><a href="https://www.instagram.com/lucassteinbach/" target="_blank"><i class="fa-brands fa-instagram"></i>Instagram</a></span>
@@ -247,7 +248,7 @@
                 </div>
               </div>
             </div>
-        </section> 
+        </section>  
     </main>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

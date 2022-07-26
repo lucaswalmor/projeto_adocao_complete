@@ -112,13 +112,13 @@
                             </div>
                         </div>
             
-                        <div class="mb-2 col-12">
+                        {{-- <div class="mb-2 col-12">
                             @if (Route::has('password.request'))
                                 <a class="esqueceu_senha" href="{{ route('password.request') }}">
                                     {{ __('Esqueceu sua senha?') }}
                                 </a>
                             @endif
-                        </div>
+                        </div> --}}
                         <a href="{{ route('register') }}" class="botao_registrar mb-3"><button type="button" class="btn">Registrar-se</button></a> 
                         <button type="submit" class="btn botao_login">Entrar</button>
                     </div>
@@ -127,13 +127,14 @@
         </div>
         <section>
             <div class="container-fluid footer">
-                <div class="col-md-12 d-flex footer-flex">
+              <div class="col-md-12 d-flex footer-flex">
                 <div class="col-md-6 d-flex align-items-center justify-content-center">                  
-                  Desenvolvido por Lucas Steinbach
+                  Parceiros
                 </div>
                 <div class="col-md-6 d-flex align-items-center justify-content-center">
-                  <div class="col-6 d-flex justify-content-center">
-                    <h5>Contato para desenvolvimento</h5>
+                  <div class="col-6 d-flex justify-content-center">              
+                    Desenvolvido por Lucas Steinbach <br>
+                    Contato para desenvolvimento ->
                   </div>
                   <div class="col-6 d-flex flex-column links-contato">
                     <span><a href="https://www.instagram.com/lucassteinbach/" target="_blank"><i class="fa-brands fa-instagram"></i>Instagram</a></span>
@@ -144,7 +145,7 @@
                 </div>
               </div>
             </div>
-        </section> 
+        </section>  
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

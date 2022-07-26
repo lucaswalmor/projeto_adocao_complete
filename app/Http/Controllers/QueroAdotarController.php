@@ -10,6 +10,30 @@ class QueroAdotarController extends Controller
 {
     public function queroAdotar() {
         $pets = Fotos::select('*')->join('pet as P', 'P.id', 'fotos.pet_id')->get();
+        return view('layouts.quero_adotar', compact('pets'));
+    }
+
+    public function filtro(Request $request) {
+
+        $teste = $request->get('filtro');
+        $pets = Fotos::select('*')->join('pet as P', 'P.id', 'fotos.pet_id')
+        ->where('especie', $teste)
+        ->get();
+
+
+        if ($request->has('filtro')) {
+            $pets = Fotos::select('*')->join('pet as P', 'P.id', 'fotos.pet_id')
+            ->where('especie', $teste)
+            ->get();
+
+            if(count($pets) < 1) {
+                return redirect()->back()->withErrors(['msg' => 'Não há pets com a espécie selecionada, porfavor selecione outra espécie']);
+            } else {
+                return view('layouts.quero_adotar', compact('pets'));           
+            }
+        } else {
+            $pets = Fotos::select('*')->join('pet as P', 'P.id', 'fotos.pet_id')->get();
+        }
 
         return view('layouts.quero_adotar', compact('pets'));
     }

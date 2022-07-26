@@ -84,7 +84,7 @@ ul li:hover a {
 
 .footer {
     border-top: 5px solid #F9575C;
-    height: 75px;
+    height: 180px;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -76,6 +76,14 @@
     </header>
     
     <main>
+        {{-- MENSAGEM DE CADASTRO REALIZADO COM SUCESSO --}}
+        @if($errors->any())
+          <div class="alerta">
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+              <h4>{{$errors->first()}}</h4>                  
+            </div>
+          </div>              
+        @endif
         <div class="container justify-content-center align-items-center mt-5 d-flex">
             <div class="login-card">
                 <form class="formulario-login" action="{{ route('password.email') }}" method="POST">

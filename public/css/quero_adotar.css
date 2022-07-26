@@ -34,6 +34,15 @@ a:hover {
     color: #333
 }
 
+.botao_cadastrar {
+    color: #FCC302;
+}
+
+.botao_cadastrar:hover {
+    background-color: #333 !important;
+    color: #FCC302;
+}
+
 /* FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 

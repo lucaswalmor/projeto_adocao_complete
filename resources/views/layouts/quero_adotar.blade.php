@@ -73,16 +73,41 @@
     </header>
     
     <main>
-        <section class="mt-5">
-            <div class="container-fluid containerCards">
-                {{-- MENSAGEM DE CADASTRO REALIZADO COM SUCESSO --}}
-                @if($errors->any())
-                  <div class="alerta">
+        <section class="mt-2">
+            @if($errors->any())
+                <div class="alerta">
                     <div class="alert alert-success alert-dismissible fade show" role="alert">
-                      <h4>{{$errors->first()}}</h4>                  
+                    <h4>{{$errors->first()}}</h4>                  
                     </div>
-                  </div>              
-                @endif
+                </div>              
+            @endif
+            <div class="container mt-3">
+                <form class="row g-3 needs-validation col-md-12" novalidate action="{{ route('quero_adotar_filtro') }}" method="POST">
+                    @csrf
+                    <div class="row mt-2">
+                        <h6>Selecione uma espécie</h6>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <select class="form-select" name="filtro" id="filtro" required>
+                              <option selected disabled>Espécie...</option>
+                              <option>Canino</option>
+                              <option>Felino</option>
+                              <option>Roedor</option>
+                              <option>Réptil</option>
+                              <option>Ave</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <button class="btn bg-dark botao_cadastrar">
+                               Pesquisar
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="container-fluid containerCards">
                 <input type="hidden" name="id_mais_detalhes" id="id_mais_detalhes">
                 @foreach ($pets as $item)
                     @php
@@ -115,17 +140,21 @@
                         </div>
                     </div>
                 @endforeach
+
+                {{-- {{ $pets->links() }} --}}
             </div>
         </section>  
+
         <section>
             <div class="container-fluid footer">
-                <div class="col-md-12 d-flex footer-flex">
-                <div class="col-md-6 d-flex align-items-center justify-content-center"">                  
-                  Desenvolvido por Lucas Steinbach
+              <div class="col-md-12 d-flex footer-flex">
+                <div class="col-md-6 d-flex align-items-center justify-content-center">                  
+                  Parceiros
                 </div>
                 <div class="col-md-6 d-flex align-items-center justify-content-center">
-                  <div class="col-6 d-flex justify-content-center">
-                    <h5>Contato para desenvolvimento</h5>
+                  <div class="col-6 d-flex justify-content-center">              
+                    Desenvolvido por Lucas Steinbach <br>
+                    Contato para desenvolvimento ->
                   </div>
                   <div class="col-6 d-flex flex-column links-contato">
                     <span><a href="https://www.instagram.com/lucassteinbach/" target="_blank"><i class="fa-brands fa-instagram"></i>Instagram</a></span>
@@ -136,7 +165,7 @@
                 </div>
               </div>
             </div>
-        </section> 
+        </section>  
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
